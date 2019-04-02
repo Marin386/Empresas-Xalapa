@@ -1,0 +1,57 @@
+
+<% include partials/_header %>
+
+    <div class="container">
+      <div class="row">
+        <!-- FORM REGISTRATION -->
+        <div class="col-md-5 offset-md-1">
+          <div class="text">
+            <text>Registrate</text>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <form action="/add" method="POST">
+                <div class="form-group">
+                  <input type="text" name="email" placeholder="Correo" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" placeholder="Contraseña" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="razon_social" placeholder="Razón social" class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea name="prod_serv" cols="80" placeholder="Producto o servicio" class="form-control"></textarea>
+                </div>
+                <button type="submit"  class="btn btn-primary btn-block">
+                  Registrar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- AUTHENTICATION -->
+        <div class="col-md-5">
+          <div class="text">
+            <text>Accede</text>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <form action="/signin" method="POST">
+                <div class="form-group">
+                  <input type="text" name="email" placeholder="Correo" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" placeholder="Contraseña" class="form-control">
+                </div>
+                <button type="submit"  class="btn btn-primary btn-block">
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<% include partials/_footer %>

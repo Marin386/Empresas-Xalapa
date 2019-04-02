@@ -1,0 +1,26 @@
+<% include partials/_header %>
+
+<div class="container">
+  <div class="row">
+    <!-- FORM -->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <form action="/edit/<%= user._id %>" method="POST">
+            <div class="form-group">
+              <input type="text" name="razon_social" placeholder="Razón social" class="form-control" value="<%= user.razon_social %>">
+            </div>
+            <div class="form-group">
+              <textarea name="prod_serv" cols="80" class="form-control" placeholder="Producto o servicio"><%= user.prod_serv %></textarea>
+            </div>
+            <button type="submit"  class="btn btn-primary btn-block">
+              Editar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>
